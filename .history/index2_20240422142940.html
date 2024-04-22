@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="numm">
+        <h1 class="he"
+          style="
+            @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+          "
+        >
+          CALCULATOR WITH <span class="red">JAVASCRIPT.</span>
+        </h1>
+        <div class="genDiv">
+          <input
+            class="num1"
+            type="number"
+            id="num1"
+            placeholder="Enter a number"
+            style=""/>
+          <select class="addition" id="operator">
+            <option class="opt"  value="add">+</option>
+            <option class="opt" value="subtract">-</option>
+            <option class="opt" value="multiply">*</option>
+            <option class="opt" value="divide">/</option>
+          </select>
+          <input class="num1" type="number" id="num2" placeholder="Enter another number" />
+          <button onclick="calculate()">Calculate</button>
+
+          <button onclick="reset()">Reset</button>
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>

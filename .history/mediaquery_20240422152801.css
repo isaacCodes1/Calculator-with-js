@@ -1,0 +1,23 @@
+@media (max-width: 480px) {
+  .genDiv {
+    /* padding: 50px 20px; */
+  }
+  .numm {
+    top: 200px;
+    width: 480px;
+    left: 10px;
+    padding: 20px;
+    margin-right: 50px;
+  }
+  .num1::placeholder {
+    font-size: 8px;
+  }
+  .num7::placeholder{
+    font-size: 8px;
+  }
+  .he{
+    font-size: 10px;
+    top: 40px;
+  }
+  .num1
+}

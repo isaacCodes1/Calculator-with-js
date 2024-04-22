@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+  <div class="numm">
+    <h1 style="" class="he"></h1>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap')
+      </style>
+    <div class="genDiv">
+  <input class="num1" type="number" id="num1" placeholder="Enter a number">
+  <select id="operator">
+    <option class="addition" value="add">+</option>
+    <option value="subtract">-</option>
+    <option value="multiply">*</option>
+    <option value="divide">/</option>
+  </select>
+  <input type="number" id="num2" placeholder="Enter another number" >
+  <button onclick="calculate()">Calculate</button>
+  
+  <button onclick="reset()">Reset</button>
+</div>
+</div>
+  <script src="script.js">
+  </script>
+  </main>
+</body>
+</html>

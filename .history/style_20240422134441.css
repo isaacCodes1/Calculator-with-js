@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 100px;
+    border: 1px solid yellow;121481
+}
+.num1{
+    width: 200px;
+    margin-left: 200px;
+    box-shadow: -8px -8px  15px rgba(255, 255, 255, 0.1), -5px -5px  15px rgba(0, 0, 0, 0.2);
+    background: #FFB1B1;
+    height: 20px;
+    
+}

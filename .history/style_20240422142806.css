@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.genDiv {
+  background: #ffeae3;
+border-radius: 10px;  
+  padding: 50px;
+}
+
+.main {
+  background-color: #f4dfc8;
+}
+.numm {
+  position: absolute;
+  top: 200px;
+  left: 450px;
+  border: 1px solid;
+  border-radius: 10px;
+  background: #000;
+  padding-left: 100px;
+  padding-bottom: 100px;
+  padding-right: 100px;
+  padding-top: 100px;
+}
+.he {
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.red {
+  color: salmon;
+}
+.num1 {
+  width: 200px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    -5px -5px 15px rgba(0, 0, 0, 0.2);
+  background: #ffeae3;
+  height: 30px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.num1::placeholder {
+  font-size: 10px;
+}
+.opt{
+    background: #000;
+    color: #fff;
+}
+.addition {
+  width: 50px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+  background: #ffeae3;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 18px; 
+}

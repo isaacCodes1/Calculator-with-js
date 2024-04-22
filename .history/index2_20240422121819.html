@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Calculator</title>
+</head>
+<body>
+    <input type="text" id="display"> <br>
+  <input type="number" id="num1" placeholder="Enter a number">
+  <select id="operator">
+    <option value="add" class="operator">+</option>
+    <option value="subtract" class="operator">-</option>
+    <option value="multiply" class="operator">*</option>
+    <option value="divide" class="operator">/</option>
+  </select>
+  <input type="number" id="num2" placeholder="Enter another number">
+  
+  <input type="button" value="="  onclick="display.value = eval(display.value)" class="equal operator"/>
+  <button onclick="reset()">Reset</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- dom -->
+condition

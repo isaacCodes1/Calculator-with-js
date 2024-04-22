@@ -1,0 +1,9 @@
+@media(max-width:480px){
+    .genDiv{
+        padding: 20px 20px;
+    }
+    .numm{
+        top: 20px;
+        width: 100px;
+    }
+}

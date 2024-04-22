@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nu{
+    width: 100px;
+    margin-left: 20px;
+}

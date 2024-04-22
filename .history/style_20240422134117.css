@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 100px;
+}
+.num1{
+    width: 200px;
+    margin-left: 200px;
+    
+    height: 20px;
+    
+}
