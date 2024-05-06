@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    //Assignment
+//Five use cases of named, function expressions, arrow function, higher order functions333333333 and HDF
+
+// 1.)
+
+const PI = 3.14159;
+
+function calculateCircleArea(radius) {
+  return PI * Math.pow(radius, 2);
+}
+console.log(PI);
+
+// 2.)
+const square = (x) => x * x;
+
+console.log(square(5)); // Output: 25
+
+// 3.)
+const multiply = (a, b) => a * b;
+
+console.log(multiply(5, 10)); // Output: 50
+
+// 4.)
+const greet = (name = "Guest") => `Hello, ${name}!`;
+
+console.log(greet("John")); // Output: Hello, John!
+console.log(greet()); // Output: Hello, Guest!
+
+// 5)
+const createProduct = (name, price) => ({
+    name,
+    price,
+    description: "This is a great product!",
+});
+
+
+// Functions expression
+// 1.)
+const product1 = createProduct("Laptop", 1000);
+console.log(product1);
+// Output: { name: 'Laptop', price: 1000, description: 'This is a great product!' }
+
+// 2.)
+const square1 = (x) => x * x;
+
+console.log(square1(5)); // Output: 25
+
+
+// 3.)
+const doubleNumber = (num) =>  result = num * 2;
+
+console.log(doubleNumber(5)); // Output: 10
+
+// 4.)
+let greeting = "Hello";
+let name = "John";
+
+let greetPerson = function() {
+    return `${greeting}, ${name}!`;
+};
+
+console.log(greetPerson());
+
+
+// 5.)
+let num1 = 10;
+let num2 = 5;
+
+let addNumbers = function(a, b) {
+    return a + b;
+};
+
+console.log(addNumbers(num1, num2));
+
+
+
+
+// Arrow Functions.
+
+// 1.)
+
+let adDNumbers = (a, b) => a + b;
+console.log(addNumbers(5, 3)); // Output: 8
+
+// 2.)
+
+let square2 = num => num * num;
+console.log(square2(4)); // Output: 16
+
+
+// 3.)
+
+let greetingS = name => `Hello, ${name}!`;
+console.log(greetingS("Isaac")); // Output: Hello, Isaac!
+
+
+// 4.)
+
+let isEven = num => num % 2 === 0 ? true : false;
+console.log(isEven(5)); // Output: true
+</script>
+</html>

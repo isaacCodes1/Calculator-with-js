@@ -89,7 +89,47 @@ console.log(name2(5));
 //arrow function
 const name2 = (value) => value * 12;
 log(name2(5));
+//Assignment
+//Five use cases of named, function expressions, arrow function, higher order functions333333333 and HDF
 
+
+
+const PI = 3.14159;
+
+function calculateCircleArea(radius) {
+  return PI * Math.pow(radius, 2);
+}
+
+const square = (x) => x * x;
+
+console.log(square(5)); // Output: 25
+
+
+const multiply = (a, b) => a * b;
+
+console.log(multiply(5, 10)); // Output: 50
+
+
+const greet = (name = "Guest") => `Hello, ${name}!`;
+
+console.log(greet("John")); // Output: Hello, John!
+console.log(greet()); // Output: Hello, Guest!
+
+
+const createProduct = (name, price) => ({
+  name,
+  price,
+  description: "This is a great product!",
+});
+
+const product1 = createProduct("Laptop", 1000);
+console.log(product1);
+// Output: { name: 'Laptop', price: 1000, description: 'This is a great product!' }
+
+
+const square = (x) => x * x;
+
+console.log(square(5)); // Output: 25
 
 
 
