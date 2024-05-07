@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //Assignment
+    //Five use cases of named, function expressions, arrow function, higher order functions.
+
+
+    //Named Functions   //A named function is a function that has a name assigned to it. It is defined using the function keyword followed by a function declaration, and it is given a name using the function keyword followed by the function name and parentheses
+    // 1.)
+
+//     const PI = 3.14159;
+
+//     function calculateCircleArea(radius) {
+//       return PI * Math.pow(radius, 2);
+//     }
+//     console.log(PI);
+
+//     // 2.)
+//     const square = (x) => x * x;
+
+//     console.log(square(5)); // Output: 25
+
+//     // 3.)
+//     const multiply = (a, b) => a * b;
+
+//     console.log(multiply(5, 10)); // Output: 50
+
+//     // 4.)
+//     const greet = (name = "Guest") => `Hello, ${name}!`;
+
+//     console.log(greet("John")); // Output: Hello, John!
+//     console.log(greet()); // Output: Hello, Guest!
+
+//     // 5)
+//     const createProduct = (name, price) => ({
+//       name,
+//       price,
+//       description: "This is a great product!",
+//     });
+
+//     // Functions expression     //A function expression is a JavaScript expression that creates a function and assigns it to a variable or object property. It is defined using the 
+//     // 1.)
+//     const product1 = createProduct("Laptop", 1000);
+//     console.log(product1);
+//     // Output: { name: 'Laptop', price: 1000, description: 'This is a great product!' }
+
+//     // 2.)
+//     const square1 = (x) => x * x;
+
+//     console.log(square1(5)); // Output: 25
+
+//     // 3.)
+//     // Function expression assigned to a variable
+//         const double = function(num) {
+//             return num * 2;
+//         };
+//         // Using the function expression
+//         console.log(double(5)); // Output: 10  // This will multiply the 5 and 8 by 2 and add their results together
+//         console.log(double(8)); // Output: 16
+
+//     // 4.)
+//     let greeting = "Hello";
+//     let name = "John";
+
+//     let greetPerson = function () {
+//         return `${greeting}, ${name}!`;
+//     };
+
+//     console.log(greetPerson());
+
+//     // 5.)
+//     let num1 = 10;
+//     let num2 = 5;
+
+//     let addNumbers = function (a, b) {
+//         return a + b;
+//     };
+
+//     console.log(addNumbers(num1, num2));
+
+//     // Arrow Functions.
+
+//     // 1.)
+
+//     let adDNumbers = (a, b) => a + b;
+//     console.log(addNumbers(5, 3)); // Output: 8
+
+//     // 2.)
+
+//     let square2 = (num) => num * num;
+//     console.log(square2(4)); // Output: 16
+
+//     // 3.)
+
+//     let greetingS = (name) => `Hello, ${name}!`;
+//     console.log(greetingS("Isaac")); // Output: Hello, Isaac!
+
+//     // 4.)
+
+//     let isEven = (num) => (num % 2 === 0 ? true : false);
+//     console.log(isEven(10)); // Output: true
+
+//     // 5.)
+
+//     let calculateArea = (length, width) => length * width;
+//     console.log(calculateArea(4, 5)); // Output: 20
+
+//     // Higher order Functions.      //Higher-order functions are functions that can take other functions as arguments or return functions as their results.
+
+//     // 1.)
+
+//     let numbers = [1, 2, 3, 4, 5, 6];
+//     let evenNumbers = numbers.filt      er((num) => num % 2 === 0);
+//     console.log(evenNumbers); // Output: [2, 4, 6]
+
+//     // 2.)
+
+//     let numberS = [1, 2, 3, 4, 5];
+//     let doubledNumbers = numberS.map((num) => num * 2);
+//     console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]    //The map method is a higher-order function in JavaScript that is used to transform each element of an array into a new element based on a callback function.
+
+
+//     // 3.)
+
+//     let numbErs = [1, 2, 3, 4, 5];
+//     let sum = numbErs.reduce((acc, curr) => acc + curr, 0);
+//     console.log(sum); // Output: 15
+
+
+// // 4.)
+
+//     let colors = ['red', 'blue', 'green'];
+//     colors.forEach(color => 
+//     console.log(color));
+// // Output:
+// // red
+// // blue
+// // green
+
+
+// // 5.)
+
+// let nuMbers = [10, 20, 30, 40, 50];
+
+// // Using the find method to find the first element greater than 25
+// let result = nuMbers.find(num => num > 25);
+
+// console.log(result); // Output: 30
+
+
+
+
+  // .Concat Method..
+  // 1,)
+
+  var name = "Isaac";
+  var surName = "Oladimeji";
+  var fullName = name.concat(" ", surName);
+  console.log(fullName);  
+
+
+  // 2.)
+
+  let address = "No.";
+  let noAddress = "10";
+  let addStreet = "Police"
+
+    </script>
+</html>

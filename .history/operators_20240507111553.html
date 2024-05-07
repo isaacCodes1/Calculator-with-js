@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic Operators</title>
+    </head>
+    <body></body>
+    <script>
+    // Arithmetic operators
+    // Addition
+    var num1 = 120.91;
+    var num2 = 20;
+    console.log(parseFloat(num1) + num2);
+    console.log(num1 * num2);
+    console.log(num1 - num2);
+    console.log(num1 / num2);
+    console.log(num1 % num2);
+    // Modulus returns the remainder of the division.
+    // Comments are codes that the computer doesn't recognize.
+    /*
+    This is a multi-line comment.
+    */
+    // This is a single line comment.
+
+    // Logical Operators.
+
+    // e.g If there's a product that you want to display on your website, you use 'if' and 'and'.
+    // If the product is in stock, and the price is higher than zero. Here you use two logical operators.
+
+    var noOfOranges = 20;
+    var canByOrange = true;
+    var walletBalance = 120;
+    var eachOrangePrice = 50;
+    var totalOrangePrice = eachOrangePrice * noOfOranges;
+    console.log(totalOrangePrice);
+
+    if (walletBalance >= totalOrangePrice && canByOrange == true) {
+        console.log("You can buy");
+    }
+
+
+
+    // Functions
+    // A function is a block of code that performs a specific task.
+    //  A function is a way to write re-useable things, instead of writing bulky code.
+
+
+    function addition(){
+        console.log(5 + 4);
+    }
+    addition();
+
+    //  Whatever is in the brackets of a function is called the parameter.
+
+    function add (value1, value2) {
+        console.log(value1 + value2);
+    }
+    add(10, 20);
+
+    //  Whenever a function sees a return statement, that's where  the function ends.
+
+    function calc (value2, value3) {
+        return value2 + value3;
+    }
+    calc(2 + 3);
+
+    function pluralize(count , text) { //guard clause. It eliminates the use of else in a conditional statement.
+        if (count > 1) return count + " " + text + 's';{
+            return count + " " + text
+        }
+
+    }
+    console.log(pluralize(10, 'Orange'));
+
+    //  For if statements, If you are only declaring one statement, you can do without the curly braces.
+
+
+
+
+    // Function expression
+
+
+    const name = (value) =>{
+    return value * 12
+}
+console.log(name2(5));
+
+//arrow function
+const name2 = (value) => value * 12;
+log(name2(5));
+
+
+
+
+
+
+
+        </script>
+</html>
