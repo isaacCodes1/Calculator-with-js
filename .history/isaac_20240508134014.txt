@@ -1,0 +1,4 @@
+let message = 'Hello, World!';
+let messageLength = message.length;
+
+console.log(messageLength); // Output: 13
