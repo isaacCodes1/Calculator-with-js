@@ -395,7 +395,7 @@ console.log(newName);
 
   // 1.)
 
-  // .join Method.     //The join method in JavaScript is used to create and return a new string by concatenating all the elements of an array. 
+  // .join Method.
   const fruIts = ["Banana", "Orange", "Apple", "Mango"];
 
 // 1,)
@@ -418,7 +418,7 @@ console.log(newName);
 
 
 
-  // .push Method   //The push method in JavaScript is used to add one or more elements to the end of an array and returns the new length of the array.
+  // .push Method
 
   // 1.)
     let fruit = ['apple', 'banana', 'orange'];
@@ -438,7 +438,7 @@ console.log(newName);
   console.log(colors); // Output: ['red', 'blue', 'green', 'yellow', 'purple']
 
 
-  // .pop  Method    //The pop method in JavaScript is used to remove the last element from an array and return that element.
+  // .pop  Method
 
   // 1.)
   let fruis = ['apple', 'banana', 'orange'];
@@ -460,7 +460,7 @@ console.log(newName);
   console.log(colours); // Output: ['red', 'blue']
 
 
-  // Shift Method...    //The shift method in JavaScript is used to remove the first element from an array and return that element.
+  // Shift Method...
 
   // 1.)
   let colos = ['red', 'blue', 'green'];
@@ -484,7 +484,7 @@ console.log(newName);
 
 
 
-  // Unshift Method....       //The unshift method in JavaScript is used to add one or more elements to the beginning of an array.
+  // Unshift Method....
 
   // 1.)
 
@@ -495,142 +495,6 @@ console.log(newName);
 
   // 2.)
 
-  let pic = ['green', 'blue'];
-  pic.unshift('red');
-  console.log(pic); // Output: ['red', 'green', 'blue']
-
-  // 3.)
-
-  let animals = ['dog', 'cat'];
-  animals.unshift('rabbit', 'hamster');
-  console.log(animals); // Output: ['rabbit', 'hamster', 'dog', 'cat']
-
-
-
-
-
-  // Wednesday Assignment.
   
-  // delete Method..      //In JavaScript, the delete operator is used to delete a property from an object. It can also be used to delete an element from an array, but it does not reindex the array or change the length of the array. Instead, it sets the value of the deleted element to undefined.
-
-
-  // 1.)
-
-  let veg = ['apple', 'banana', 'orange'];
-  delete veg[1];
-  console.log(veg); // Output: ['apple', empty, 'orange']
-
-  // 2.)
-
-  let count = [1, 2, 3, 4, 5];
-  delete count[3];
-  console.log(count); // Output: [1, 2, 3, empty, 5]
-
-  // 3.)
-
-  let shade = ['red', 'blue', 'green'];
-  delete shade[2];
-  console.log(shade); // Output: ['red', 'blue, empty]
-
-
-
-  // concat Method....      //This is used to join tow or more arrays together in to one new array.
-
-  // 1.)
-
-  let arr1 = [1, 2, 3];
-  let arr2 = [4, 5, 6];
-  let combinedArray = arr1.concat(arr2);
-  console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
-
-
-  // 2.)
-
-  let eatables = ['apple', 'banana'];
-  let moreFruits = ['orange', 'kiwi'];
-  let allFruits = eatables.concat(moreFruits);
-  console.log(allFruits); // Output: ['apple', 'banana', 'orange', 'kiwi']
-
-
-  // 3.)
-
-  let names1 = ['John', 'Jane'];
-  let names2 = ['Alice', 'Bob'];
-  let allNames = names1.concat(names2);
-  console.log(allNames); // Output: ['John', 'Jane', 'Alice', 'Bob']
-
-
-
-  // copyWithin method...         //The copyWithin method is used to copy a sequence of array elements within the same array.
-
-
-
-  // 1.)
-
-  let counts = [1, 2, 3, 4, 5];
-  counts.copyWithin(0, 3, 5);
-  console.log(counts); // Output: [4, 5, 3, 4, 5]
-
-
-  // 2.)
-
-  let color = ['red', 'green', 'blue', 'yellow', 'orange'];
-  color.copyWithin(1, 3, 5);
-  console.log(color); // Output: ['red', 'yellow', 'orange', 'yellow', 'orange']
-
-  // 3.)
-
-  let letters = ['a', 'b', 'c', 'd', 'e'];
-  letters.copyWithin(-3, -1);
-  console.log(letters); // Output: ['a', 'd', 'e', 'd', 'e']
-
-
-
-
-  // flat Method...       //The flat method is used to flatten a nested array by concatenating all sub-array elements into a new array.
-
-
-  // 1.)
-
-  let nestedArray = [1, [2, 3], 4, [5]];
-  let flatArray = nestedArray.flat();
-  console.log(flatArray); // Output: [1, 2, 3, 4, 5]
-
-  // 2.)
-
-  let deeplyNested = [1, [2, [3, [4]]]];
-  let flatDeeplyNested = deeplyNested.flat(Infinity);
-  console.log(flatDeeplyNested); // Output: [1, 2, 3, 4]
-
-
-  // 3.)
-
-  let arrayWithEmptySlots = [1, 2, , 3, 4];
-  let flatArrayWithoutEmpty = arrayWithEmptySlots.flat();
-  console.log(flatArrayWithoutEmpty); // Output: [1, 2, 3, 4]
-
-
-
-  // splice Method........
-
-
-  // 1.)
-
-  let figure = [10, 20, 30, 40, 50];
-  figure.splice(2, 2); // Removes 2 elements starting from index 2
-  console.log(figure); // Output: [10, 20, 50]
-
-
-  // 2.)
-
-  let veges = ['apple', 'banana', 'cherry'];
-  veges.splice(1, 0, 'orange', 'pear'); // Inserts 'orange' and 'pear' at index 1
-  console.log(veges); // Output: ['apple', 'orange', 'pear', 'banana', 'cherry']
-
-  // 3.)
-
-  let shades = ['red', 'green', 'blue'];
-  shades.splice(1, 1, 'yellow', 'purple'); // Replaces 1 element at index 1 with 'yellow' and 'purple'
-  console.log(shades); // Output: ['red', 'yellow', 'purple', 'blue']
     </script>
 </html>
