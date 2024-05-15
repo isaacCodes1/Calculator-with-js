@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <h1>JavaScript Arrays Method</h1>
+    <h2>To string Methods</h2>
+    <p>The toString() method converts an array to a comma separated string.</p>
+    <p id="demo3"></p>
+
+    <h2>The length Property</h2>
+
+<p>The length property returns the length of an array:</p>
+
+<p id="demo2"></p>
+
+
+<h1>JavaScript Arrays</h1>
+<h2>The at() Method</h2>
+
+<p>The at() method returns an indexed element from an array:</p>
+
+<p id="demo4"></p>
+</body>
+<!-- Wednesday 8th May 2024 -->
+<script>
+    // Arrays.....
+
+    // Another name for index is position.
+
+    var cars = ["Saab", "BMW", "Volvo"];
+    document.getElementById("demo").innerHTML = cars[2];
+
+    // If I recall another value for car[2], the value will change
+
+    cars[2] = "Honda";
+    document.getElementById("demo1").innerHTML = cars[2];   
+
+
+
+    // Array Methods
+    // toString method
+    const  fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo3").innerHTML = fruits.toString();
+
+
+
+    // .length method
+    const fruIts = ["Banana", "Orange", "Apple", "Mango"];
+    let size = fruIts.length;
+    document.getElementById("demo2").innerHTML = size;
+
+    // .at Method
+
+    const frUits = ["Banana", "Orange", "Apple", "Mango"];
+    let frUit = frUits.at(2);
+
+    document.getElementById("demo4").innerHTML = frUit;
+
+
+    let fruit = ["Apple"];
+    delete fruit[0];
+    console.log(fruit);
+
+    // Arrays with Higher order functions.
+
+    //For each
+
+    var names = ['Chuks', 'Noura', 'David', 'Isaac'];
+
+    names.forEach((name) => {
+        console.log(name.toUpperCase());
+        if (name=="Isaac") {
+            console.log(name);
+            console.log('I found you!');
+        }
+             //You can now edit each of the names since you stored the variable holding them in a variable in a function.
+    });   //You cannot add 's' to the names variable, since it doesn't hold the array.
+
+
+
+
+    // Assignment, Tuesday May 14th 2024.
+
+    //Work on sort, reverse, reduce, every, some, include, find, findIndex functions, with two examples each.
+
+    // Sort arranges the items in the array by alphabetical order.
+
+    // 1.)
+    const countries = ['Nigeria', 'Nepal', 'Russia', 'Namibia', 'America'];
+
+    countries.sort();
+
+    console.log(countries);
+
+    // 2.)
+    const names1 = ['Isaac', 'Daniel', 'Samuel', 'Chuks', 'Zendaya', 'Toby', 'Xander'];
+    
+    names1.sort();
+
+    console.log(names1);
+
+
+    // Reverse method reverses or mirrors the array.
+
+    //1.)
+
+    var ages = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+    ages.sort();
+
+    console.log(ages);
+
+    //2.)
+
+    var whatIsYourName = ['Damicodez', 'is', 'name', 'My'];
+
+    whatIsYourName.reverse();
+
+    console.log(whatIsYourName);
+        
+
+    // Reduce method reduces the array to a single value.
+
+    //1.)
+
+    const numbers = [45, 4, 9, 16, 25];
+
+    let sum = numbers.reduce(myFunction);
+
+    function myFunction(total, value){
+        return total + value;
+    }
+    console.log(sum);
+
+
+
+    //2.)
+
+    const numbers11 = [1, 2, 3, 4, 5];
+
+    let res = numbers11.reduce(Function);
+
+    function Function(accumulator, currentValue) {
+        return accumulator + currentValue;
+    }
+
+    console.log(res);
+
+
+    // Every method checks if all the array values pass a test and returns a BOOLEAN.
+
+    //1.)
+    const val = [45, 4, 9, 16, 25];
+    let allOver18 = numbers.every(myFunction);
+
+    function myFunction(value, index, array) {
+        return value > 18;
+}
+    console.log(allOver18);
+
+    //2.)
+
+    const myName = ['John', 'Jane', 'Jack', 'Jill'];
+
+    const allStartWithJ = myName.every(myName => myName.charAt(0) === 'J');
+
+    console.log(allStartWithJ); // Output: true
+
+
+    //Some method checks if some array value passes a test and returns a BOOLEAN
+
+    //1.)
+
+        const myFruits = ['apple', 'banana', 'orange', 'apple', 'grapes'];
+    console.log(myFruits.some(myFruits => myFruits === 'orange')); // Output: true
+
+    //2.)
+
+        const myNum = [10, 20, 30, 40, 50];
+    console.log(myNum.some(myNum => myNum > 30)); // Output: true
+
+
+    //Include method checks if an element is present in an array.
+
+    //1.)
+
+        const colors = ['red', 'green', 'blue', 'yellow'];
+            console.log(colors.includes('green')); // Output: true
+
+    //2.)
+    const myN = [1, 2, 3, 4, 5];
+        console.log(myN.includes(6)); // Output: false
+
+        //Find method returns the value of the first array element that passes a test function.
+
+        //1.)
+    const muNu = [10, 20, 30, 40, 50];
+    const foundNumber = muNu.find(num => num > 25);
+        console.log(foundNumber); // Output: 30   
+        
+        //2.)
+
+    const myFru = ['apple', 'banana', 'orange', 'grapes'];
+    const foundFruit = myFru.find(fruit => fruit.length > 5);
+        console.log(foundFruit); // Output: banana
+
+
+        //findIndex
+
+    const myValues = [10, 20, 30, 40, 50];
+    const foundIndex = myValues.findIndex(num => num > 25);
+        console.log(foundIndex); // Output: 2
+</script>
+</html>

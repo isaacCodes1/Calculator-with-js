@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <h1>JavaScript Arrays Method</h1>
+    <h2>To string Methods</h2>
+    <p>The toString() method converts an array to a comma separated string.</p>
+    <p id="demo3"></p>
+
+    <h2>The length Property</h2>
+
+<p>The length property returns the length of an array:</p>
+
+<p id="demo2"></p>
+
+
+<h1>JavaScript Arrays</h1>
+<h2>The at() Method</h2>
+
+<p>The at() method returns an indexed element from an array:</p>
+
+<p id="demo4"></p>
+</body>
+<!-- Wednesday 8th May 2024 -->
+<script>
+    // Arrays.....
+
+    // Another name for index is position.
+
+    var cars = ["Saab", "BMW", "Volvo"];
+    document.getElementById("demo").innerHTML = cars[2];
+
+    // If I recall another value for car[2], the value will change
+
+    cars[2] = "Honda";
+    document.getElementById("demo1").innerHTML = cars[2];   
+
+
+
+    // Array Methods
+    // toString method
+    const  fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo3").innerHTML = fruits.toString();
+
+
+
+    // .length method
+    const fruIts = ["Banana", "Orange", "Apple", "Mango"];
+    let size = fruIts.length;
+    document.getElementById("demo2").innerHTML = size;
+
+    // .at Method
+
+    const frUits = ["Banana", "Orange", "Apple", "Mango"];
+    let frUit = frUits.at(2);
+
+    document.getElementById("demo4").innerHTML = frUit;
+
+
+    let fruit = ["Apple"];
+    delete fruit[0];
+    console.log(fruit);
+
+    // Arrays with Higher order functions.
+
+    //For each
+
+    var names = ['Chuks', 'Noura', 'David', 'Isaac'];
+
+    names.forEach()
+</script>
+</html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Assignments</title>
+  </head>
+  <body>
+    <h1>The .replace String Method.....</h1>
+
+  <button onclick="myFunction()">Replace</button>
+  
+
+  <p id="replace">Please visit where!</p>
+  <p id="area"></p>
+  <button onclick="calculateArea()">Calculate Area</button>
+
+  <button onclick="Function()">Undo</button>
+  <p id="undo">Please visit MalHub, the best school for your future as a tech bro or sis😊</p>
+
+
+  <h1>JavaScript Arrays</h1>
+<h2>The join() Method</h2>
+
+<p>The join() method joins array elements into a string.</p>
+<p>It this example we have used " * " as a separator between the elements:</p>
+
+<p id="demO"></p>
+
+  </body>
+  <script>
+    //Assignment
+    // Monday 6th May 2024.
+    //Five use cases of named, function expressions, arrow function, higher order functions.
+
+
+    //Named Functions   //A named function is a function that has a name assigned to it. It is defined using the function keyword followed by a function declaration, and it is given a name using the function keyword followed by the function name and parentheses
+    // 1.)
+
+//     const PI = 3.14159;
+
+//     function calculateCircleArea(radius) {
+//       return PI * Math.pow(radius, 2);
+//     }
+//     console.log(PI);
+
+//     // 2.)
+//     const square = (x) => x * x;
+
+//     console.log(square(5)); // Output: 25
+
+//     // 3.)
+//     const multiply = (a, b) => a * b;
+
+//     console.log(multiply(5, 10)); // Output: 50
+
+//     // 4.)
+//     const greet = (name = "Guest") => `Hello, ${name}!`;
+
+//     console.log(greet("John")); // Output: Hello, John!
+//     console.log(greet()); // Output: Hello, Guest!
+
+//     // 5)
+//     const createProduct = (name, price) => ({
+//       name,
+//       price,
+//       description: "This is a great product!",
+//     });
+
+//     // Functions expression     //A function expression is a JavaScript expression that creates a function and assigns it to a variable or object property. It is defined using the 
+//     // 1.)
+//     const product1 = createProduct("Laptop", 1000);
+//     console.log(product1);
+//     // Output: { name: 'Laptop', price: 1000, description: 'This is a great product!' }
+
+//     // 2.)
+//     const square1 = (x) => x * x;
+
+//     console.log(square1(5)); // Output: 25
+
+//     // 3.)
+//     // Function expression assigned to a variable
+//         const double = function(num) {
+//             return num * 2;
+//         };
+//         // Using the function expression
+//         console.log(double(5)); // Output: 10  // This will multiply the 5 and 8 by 2 and add their results together
+//         console.log(double(8)); // Output: 16
+
+//     // 4.)
+//     let greeting = "Hello";
+//     let name = "John";
+
+//     let greetPerson = function () {
+//         return `${greeting}, ${name}!`;
+//     };
+
+//     console.log(greetPerson());
+
+//     // 5.)
+//     let num1 = 10;
+//     let num2 = 5;
+
+//     let addNumbers = function (a, b) {
+//         return a + b;
+//     };
+
+//     console.log(addNumbers(num1, num2));
+
+//     // Arrow Functions.
+
+//     // 1.)
+
+//     let adDNumbers = (a, b) => a + b;
+//     console.log(addNumbers(5, 3)); // Output: 8
+
+//     // 2.)
+
+//     let square2 = (num) => num * num;
+//     console.log(square2(4)); // Output: 16
+
+//     // 3.)
+
+//     let greetingS = (name) => `Hello, ${name}!`;
+//     console.log(greetingS("Isaac")); // Output: Hello, Isaac!
+
+//     // 4.)
+
+//     let isEven = (num) => (num % 2 === 0 ? true : false);
+//     console.log(isEven(10)); // Output: true
+
+//     // 5.)
+
+//     let calculateArea = (length, width) => length * width;
+//     console.log(calculateArea(4, 5)); // Output: 20
+
+//     // Higher order Functions.      //Higher-order functions are functions that can take other functions as arguments or return functions as their results.
+
+//     // 1.)
+
+//     let numbers = [1, 2, 3, 4, 5, 6];
+//     let evenNumbers = numbers.filt      er((num) => num % 2 === 0);
+//     console.log(evenNumbers); // Output: [2, 4, 6]
+
+//     // 2.)
+
+//     let numberS = [1, 2, 3, 4, 5];
+//     let doubledNumbers = numberS.map((num) => num * 2);
+//     console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]    //The map method is a higher-order function in JavaScript that is used to transform each element of an array into a new element based on a callback function.
+
+
+//     // 3.)
+
+//     let numbErs = [1, 2, 3, 4, 5];
+//     let sum = numbErs.reduce((acc, curr) => acc + curr, 0);
+//     console.log(sum); // Output: 15
+
+
+// // 4.)
+
+//     let colors = ['red', 'blue', 'green'];
+//     colors.forEach(color => 
+//     console.log(color));
+// // Output:
+// // red
+// // blue
+// // green
+
+
+// // 5.)
+
+// let nuMbers = [10, 20, 30, 40, 50];
+
+// // Using the find method to find the first element greater than 25
+// let result = nuMbers.find(num => num > 25);
+
+// console.log(result); // Output: 30
+
+
+// Tuesday 7th May, 2024.
+
+  // .Concat Method..
+  // 1,)
+
+  var name = "Isaac";
+  var surName = "Oladimeji";
+  var fullName = name.concat(" ", surName);
+  console.log(fullName);  
+
+
+  // 2.)
+
+  let address = "No.";
+  let noAddress = "10";
+  let addStreet = "Police Road.";
+  let fullAddress = address.concat(" ", noAddress, " ", addStreet);
+  console.log(fullAddress); 
+
+
+  // 3.)
+  
+  let myList = "I need 10 Apples,";
+  let myList1 = "Oranges, maybe🫡 watermelon,";
+  let myList2 = "and a good blender for";
+  let myList3 = "my fruit project!";
+  let full = myList.concat(" ", myList1, " ", myList2, " ", myList3);
+  console.log(full);
+
+
+
+  // .padStart Method...
+
+
+  // 1.)
+  
+  let myPassword1 = "5012"
+  let fullPassword = myPassword1.padStart(5, "3",);
+  console.log(fullPassword);  //Output:  "35012"
+
+  // 2.)
+
+  let str = '123';
+  let paddedStr = str.padStart(5, '0');
+  console.log(paddedStr); // Output: "00123"
+
+  // 3.)
+
+  let num = 7;
+  let paddedNum = num.toString().padStart(3, '0');
+  console.log(paddedNum); // Output: "007"
+
+
+
+  // .padEnd Method.....
+
+
+  // 1.)
+
+  let Str = 'Hello, world';
+  let PaddedStr = Str.padEnd(8, '!');
+  console.log(PaddedStr); // Output: "Hello!!!"
+
+
+  // 2.)
+
+  let number = 123;
+  let paddedNumber = number.toString().padEnd(6, '0');
+  console.log(paddedNumber); // Output: "123000"
+
+
+  // 3.)
+
+  let text = 'JavaScript no be your mate';
+  let paddedText = text.padEnd(40, "😑!");
+  console.log(paddedText); // Output: "JavaScript no be your mate 😑!😑!😑!😑!😑!"
+
+
+
+  // .repeat Method
+
+
+  // 1.)
+
+  let str1 = "Welcome! ";
+  let repeatedStr = str1.repeat(3);
+  console.log(repeatedStr); // Output: "abcabcabc"
+
+
+  // 2.)
+
+  let symbol = "*";
+  let repeatedSymbol = symbol.repeat(5);
+  console.log(repeatedSymbol); // Output: "*****"
+
+
+  // 3.)
+
+  let word = "Hello. ";
+  let repeatedWord = word.repeat(2);
+  console.log(repeatedWord); // Output: "Hello. Hello."
+
+
+
+  // .replace Method...
+
+
+  // 1.)
+
+
+  let stR = 'Hello, to the World!';
+  let newStr = stR.replace('Hello', 'JavaScript');
+  console.log(newStr); // Output: "Hello, JavaScript!"
+
+
+
+  // 2.)
+
+  //With functions...
+
+  function myFunction() {
+  let text = document.getElementById("replace").innerHTML;
+  document.getElementById("replace").innerHTML =
+  text.replace("where","MalHub, the best school for your future as a tech bro or sis😊");
+}
+
+function Function(){
+  let text = document.getElementById("undo").innerHTML;
+  document.getElementById("undo").innerHTML =
+  text.replace("MalHub, the best school for your future as a tech bro or sis😊","where!");
+}
+
+
+// 3.)
+
+  let teXt = 'Hello, World! Hello, World!';
+  let newText = teXt.replace(/Hello/g, 'Hi');
+  console.log(newText); // Output: "Hi, World! Hi, World!"
+
+
+
+
+
+  // .replaceAll method...
+
+
+  // 1.)
+
+  let sTr = 'Hi, World! Hi, World!';
+  let NewStr = sTr.replaceAll('Hi', 'Hello!');
+  console.log(NewStr); // Output: "Hello, World! Hello, World!"
+
+
+
+
+  // 2.)
+
+
+  let sentence = 'The quick brown fox jumps over the lazy dog.';
+  let newSentence = sentence.replaceAll('o', '0');
+  console.log(newSentence); // Output: "The quick br0wn f0x jumps 0ver the lazy d0g"
+
+
+  // 3.)
+
+
+  let tExt = 'Hello, World! Hello, World!';
+  let NewText = tExt.replaceAll(/World/g, 'Mr.Jamiu');
+  console.log(NewText); // Output: "Hi, World! Hi, World!"
+
+
+
+  let house = "ade";
+  let odHouse = "Oladimeji";
+  let newHouse = ("d" + "og");
+  console.log(newHouse);
+
+  const greet = (name = "Idowu") => `Hello, ${name}!`;
+
+    console.log(greet("John")); // Output: Hello, John!
+    console.log(greet()); // Output: Hello, Guest!
+ 
+
+
+
+  const square = (y) => y * y;
+
+    console.log(square(10)); // Output: 25
+
+
+     // Assign a value to the 'radius' variable
+     let radius = 5;
+
+// Define a function to calculate the area of a circle
+function calculateArea() {
+    // Use the Math.PI and Math.pow functions to calculate the area
+    let area = Math.PI * Math.pow(radius, 3);
+
+    // Display the result in the 'area' paragraph element
+    document.getElementById("area").innerHTML = "The area of the circle is: " + area;
+}
+
+let name22 = "fgm";
+  let name1 = "Idowu";
+  let fullName2 = `Hello, ${name22}!`;
+  console.log(fullName2);
+
+  let as = "Idowu";
+let newName = as.toUpperCase();
+console.log(newName);
+
+
+
+
+// Wednesday 8th May, 2024.
+
+  // 1.)
+
+  // .join Method.     //The join method in JavaScript is used to create and return a new string by concatenating all the elements of an array. 
+  const fruIts = ["Banana", "Orange", "Apple", "Mango"];
+
+// 1,)
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  document.getElementById("demO").innerHTML = fruIts.join(" * ");
+
+
+  // 2.)
+  let fRuits = ['apple', 'banana', 'cherry'];
+  let result = fRuits.join(', ');
+
+  console.log(result); // Output: "apple, banana, cherry"
+
+  // 3.)
+
+  let numbers = [1, 2, 3, 4, 5];
+  let reSult = numbers.join(' + ');
+
+  console.log(reSult); // Output: "1 + 2 + 3 + 4 + 5"
+
+
+
+  // .push Method   //The push method in JavaScript is used to add one or more elements to the end of an array and returns the new length of the array.
+
+  // 1.)
+    let fruit = ['apple', 'banana', 'orange'];
+    fruit.push('grape');
+  console.log(fruit); // Output: ['apple', 'banana', 'orange', 'grape']
+
+  // 2.)
+
+  let numbeR = [1, 2, 3, 4];
+  numbeR.push(5);
+  console.log(numbers); // Output: [1, 2, 3, 4, 5]
+
+  // 3.)
+
+  let colors = ['red', 'blue', 'green'];
+  colors.push('yellow', 'purple');
+  console.log(colors); // Output: ['red', 'blue', 'green', 'yellow', 'purple']
+
+
+  // .pop  Method    //The pop method in JavaScript is used to remove the last element from an array and return that element.
+
+  // 1.)
+  let fruis = ['apple', 'banana', 'orange'];
+  let lastFruit = fruis.pop();
+  console.log(lastFruit); // Output: 'orange'
+  console.log(fruis); // Output: ['apple', 'banana']
+
+
+  // 2.)
+  let numb = [1, 2, 3, 4];
+  let lastNumber = numb.pop();
+  console.log(lastNumber); // Output: 4
+  console.log(numb); // Output: [1, 2, 3]
+
+  // 3.)
+  let colours = ['red', 'blue', 'green'];
+  let lastColor = colours.pop();
+  console.log(lastColor); // Output: 'green'
+  console.log(colours); // Output: ['red', 'blue']
+
+
+  // Shift Method...    //The shift method in JavaScript is used to remove the first element from an array and return that element.
+
+  // 1.)
+  let colos = ['red', 'blue', 'green'];
+  let firstColor = colos.shift();
+  console.log(firstColor); // Output: 'red'
+  console.log(colos); // Output: ['blue', 'green']
+  
+  // 2.)
+
+  let numers = [1, 2, 3, 4, 5];
+  let firstNumber = numers.shift();
+  console.log(firstNumber); // Output: 1
+  console.log(numers); // Output: [2, 3, 4, 5]
+
+  // 3.)
+
+  let fun = ['apple', 'banana', 'orange', 'kiwi'];
+  let firstFruit = fun.shift();
+  console.log(firstFruit); // Output: 'apple'
+  console.log(fun); // Output: ['banana', 'orange', 'kiwi']
+
+
+
+  // Unshift Method....       //The unshift method in JavaScript is used to add one or more elements to the beginning of an array.
+
+  // 1.)
+
+  let nos = [3, 4, 5];
+  nos.unshift(1, 2);
+  console.log(nos); // Output: [1, 2, 3, 4, 5]
+
+
+  // 2.)
+
+  let pic = ['green', 'blue'];
+  pic.unshift('red');
+  console.log(pic); // Output: ['red', 'green', 'blue']
+
+  // 3.)
+
+  let animals = ['dog', 'cat'];
+  animals.unshift('rabbit', 'hamster');
+  console.log(animals); // Output: ['rabbit', 'hamster', 'dog', 'cat']
+
+
+
+
+
+  // Wednesday Assignment.
+
+  // delete Method..      //In JavaScript, the delete operator is used to delete a property from an object. It can also be used to delete an element from an array, but it does not reindex the array or change the length of the array. Instead, it sets the value of the deleted element to undefined.
+
+
+  // 1.)
+
+  let veg = ['apple', 'banana', 'orange'];
+  delete veg[1];
+  console.log(veg); // Output: ['apple', empty, 'orange']
+
+  // 2.)
+
+  let count = [1, 2, 3, 4, 5];
+  delete count[3];
+  console.log(count); // Output: [1, 2, 3, empty, 5]
+
+  // 3.)
+
+  let shade = ['red', 'blue', 'green'];
+  delete shade[2];
+  console.log(shade); // Output: ['red', 'blue, empty]6
+
+
+
+  // concat Method....      //This is used to join tow or more arrays together in to one new array.
+
+  // 1.)
+
+  let arr1 = [1, 2, 3];
+  let arr2 = [4, 5, 6];
+  let combinedArray = arr1.concat(arr2);
+  console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+
+
+  // 2.)
+
+  let eatables = ['apple', 'banana'];
+  let moreFruits = ['orange', 'kiwi'];
+  let allFruits = eatables.concat(moreFruits);
+  console.log(allFruits); // Output: ['apple', 'banana', 'orange', 'kiwi']
+
+
+  // 3.)
+
+  let names1 = ['John', 'Jane'];
+  let names2 = ['Alice', 'Bob'];
+  let allNames = names1.concat(names2);
+  console.log(allNames); // Output: ['John', 'Jane', 'Alice', 'Bob']
+
+
+
+  // copyWithin method...         //The copyWithin method is used to copy a sequence of array elements within the same array.
+
+
+
+  // 1.)
+
+  let counts = [1, 2, 3, 4, 5];
+  counts.copyWithin(2,0);
+  console.log(counts); // Output: [4, 5, 3, 4, 5]
+
+
+  // 2.)
+
+  let color = ['red', 'green', 'blue', 'yellow', 'orange'];
+  color.copyWithin(3,0);
+  console.log(color); // Output: ['red', 'yellow', 'orange', 'yellow', 'orange']
+
+  // 3.)
+
+  let letters = ['a', 'b', 'c', 'd', 'e'];
+  letters.copyWithin(-3, -1);
+  console.log(letters); // Output: ['a', 'd', 'e', 'd', 'e']
+
+
+
+
+  // flat Method...       //The flat method is used to flatten a nested array by concatenating all sub-array elements into a new array.
+
+
+  // 1.)
+
+  let nestedArray = [1, [2, 3], 4, [5]];
+  let flatArray = nestedArray.flat();
+  console.log(flatArray); // Output: [1, 2, 3, 4, 5]
+
+  // 2.)
+
+  let deeplyNested = [1, [2, [3, [4]]]];
+  let flatDeeplyNested = deeplyNested.flat(Infinity);
+  console.log(flatDeeplyNested); // Output: [1, 2, 3, 4]
+
+
+  // 3.)
+
+  let arrayWithEmptySlots = [1, 2, , 3, 4];
+  let flatArrayWithoutEmpty = arrayWithEmptySlots.flat();
+  console.log(flatArrayWithoutEmpty); // Output: [1, 2, 3, 4]
+
+
+
+  // splice Method........
+
+
+  // 1.)
+
+  let figure = [10, 20, 30, 40, 50];
+  figure.splice(2, 2); // Removes 2 elements starting from index 2
+  console.log(figure); // Output: [10, 20, 50]
+
+
+  // 2.)
+
+  let veges = ['apple', 'banana', 'cherry'];
+  veges.splice(1, 0, 'orange', 'pear'); // Inserts 'orange' and 'pear' at index 1
+  console.log(veges); // Output: ['apple', 'orange', 'pear', 'banana', 'cherry']
+
+  // 3.)
+
+  let shades = ['red', 'green', 'blue'];
+  shades.splice(1, 1, 'yellow', 'purple'); // Replaces 1 element at index 1 with 'yellow' and 'purple'
+  console.log(shades); // Output: ['red', 'yellow', 'purple', 'blue']
+
+  let shades1 = ['red', 'green', 'blue', 'brown', 'purple', 'yellow'];
+  console.log(shades1);
+
+    </script>
+</html>
