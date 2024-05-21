@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title id="title">Document</title>
+    </head>
+    <body>
+        <aside>
+            <section>
+                <article>
+                    <h1>HTML</h1>
+                    <p>HTML stands for Hyper Text Markup Language. It is the standard markup language for creating web pages and web applications.</p>
+                </article>
+                <article>
+                    <h1>CSS</h1>
+                    <p>CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed on screen, paper, or in other media.</p>
+                </article>
+                <article>
+                    <h1>JavaScript</h1>
+                    <p>JavaScript is the programming language of the Web.</p>
+                </article>
+            </section>
+        </aside>
+        <p id="hello"></p>
+        <p id="hi"></p>
+        <p id="name"></p>
+        <p id="qualifications">Computer Programming, Music and Data Engineering</p>
+        <p id="text">I love Food!</p>
+        <p id="demo"></p>
+
+
+
+
+
+
+
+        <script>
+        // In JavaScript, objects are a data structure that allows you to store multiple values as key-value pairs. Objects can contain properties and methods, which are defined as key-value pairs.
+        const car = {type:"Fiat", model:"500", color:"white"};
+        console.log(car);
+
+        //It can also be written like this;
+
+        const myCar = {
+            name: "Sienna",
+
+            model:"symphony",
+
+            year: 2024,
+
+            engineType: 200,
+
+            color: "Red",
+
+            function(){
+                let speed = 300;
+                return this.engineType * speed;
+            }
+        }
+
+        console.log(myCar.function());// If you have a function in your object, to call it in your log call the function and brackets.
+
+
+
+
+        const person = {
+            firstName: "Oladimeji",
+            lastName : "Isaac",
+            id       : 5566,
+            fullName : function() {
+        return "My name is" + " " + this.firstName + " " + this.lastName +" " + "and" + " " + this.id + " " + "is my ID.";
+    }
+};
+console.log(person.fullName());// This will output the concatenation of the first name and the last name of the person variable.
+
+
+
+
+
+    //The HTML DOM (Document Object Model)
+    // When a web page is loaded, the browser creates a Document Object Model of the page.
+    // The DOM can be used to even manipulate HTMl elements in the webpage, sometimes the "M", in the DOM is often called Manipulation.
+    // The HTML DOM model is constructed as a tree of Objects:
+
+    // The webpage is also called a document, it can be manipulated using the document attribute.
+
+    document.title = "DOM manipulation with Javascript"; // This will change whatever the title of this website will be, even if it has already been called in the HTML. This way will not work for other elements, therefore, the getElementById id the most acceptable, as shown below-----
+    document.getElementById("title").innerHTML = "DOM manipulation with Javascript!!!!!"; // This will change whatever the title of this. This way is best to change or manipulate HTML elements in JavaScript.
+
+
+    //A node is a point in the webpage that contains a specific data.
+    ///If you look at the HTML elements above, the !DOCTYPE element is a parent node holding no child.
+    // The html element is a parent node having two children node, the head nd body elements.
+    // The head element is a parent node having three children node, the two meta element and the title element.
+    //The body element is also a parent node housing the aside element, the section, the article, and the script element.
+    //The aside element is also a parent node having two children the section and the article element.
+    //The section element is a parent node having three children, the article element, the h1 element and the p element.
+
+    //All these elements can be easily manipulated with JavaScript.
+
+    //The HTML DOM can be accessed with JavaScript (and with other programming languages).
+
+    // In the DOM, all HTML elements are defined as objects.
+
+    // The programming interface is the properties and methods of each object.
+
+    // A property is a value that you can get or set (like changing the content of an HTML element).
+
+    // A method is an action you can do (like add or deleting an HTML element).
+
+
+    //The innerHTML element and getElementById method;
+
+    //The innerHTML method is a property of a DOM element in JavaScript that allows you to get or set the HTML content inside that element. When you use the innerHTML property to get the content, it returns the HTML content inside the element as a string. When you use it to set the content, you can replace the existing content with new HTML content.
+
+    //Examples:
+    //1.) 
+    document.getElementById("hello").innerHTML= "Hello World!";  // We successfully went into the HTML and fetched the id "hello", and gave it a child node "Hello World!"
+
+    //2.)
+
+    document.getElementById("hi").innerHTML= "Hi Everyone!";  // We successfully went into the HTML and fetched the id "hi", and gave it a child node "Hi Everyone!"
+
+
+    // The getElementByClass method
+    //The getElementByTag method
+
+    //Concatenating getElementById method
+
+    const element = document.getElementById("qualifications");
+
+    document.getElementById("qualifications").innerHTML = "My name is Oladimeji Isaac, Here are my Qualifications:" + " " + element.innerHTML;
+
+
+    //QuerySelector All methods
+
+    const text = document.querySelectorAll("text");
+    document.getElementById("demo").innerHTML = "Do you want to know what I love?" + " " + document.getElementById("text").innerHTML;    
+
+
+
+
+    // We can also use the innerHTML property to modify the HTML content
+    // of an element. Let’s add a p element with the text “The DOM is
+    // awesome!” to the body element:
+    document.body.innerHTML += '<p>The DOM is awesome!</p>';
+    // Notice that we’re appending the new HTML content with the +=
+    // operator instead of reassigning the value of the innerHTML property. 
+
+
+
+    //FUNCTIONS REVISION.
+
+    //                                       THINGS TO NOTE!!
+    // • A function is a set of statements designed to perform a
+    // particular task.
+    // • During a function definition, the names representing the values we intend to supply to the function are called parameters.
+    // • During a function call, the actual values provided to the
+    // function are called arguments.
+    // • We can use up to 255 parameters in a function definition.
+    // • An anonymous function is a function that does not have a
+    // name, and to reuse an anonymous function, we have to assign
+    // it to a variable.
+    // • An IIFE (Immediately Invoked Function Expression) is a function that is invoked immediately after it is declared.
+    // • A function should have only one responsibility.
+    // • Function names should be descriptive, straight to the point and
+    // timeless.
+
+
+
+    //JavaScript String Methods.
+
+    // trim()
+
+    
+    // The trim() method removes whitespace from the beginning and end
+    // of a string:
+    let messages = ' Hello World ';
+    console.log(messages.trim())
+    // output: Hello World
+    // One important concept to understand is that these methods are
+    // chainable, meaning that you can call one method after another on the
+    // same string to perform multiple operations in a single line of code.
+    // Let’s try an example that demonstrates chaining multiple built-in
+    // methods to manipulate a string:
+    let message = ' Hello World '
+    console.log(message.trim().toUpperCase())
+    // output: HELLO WORLD
+    // In the example above, we first call the trim() method on the message
+    // variable to remove the whitespace from the beginning and end of the
+    // string. Then we call the toUpperCase() method on the result of the
+    // trim() method to convert the string to uppercase.
+
+
+
+
+    // JS Math functions.
+    // JavaScript has a built-in Math object that has properties and methods
+    // for mathematical constants and operations. Let’s take a look at some
+    // of the most commonly used methods.
+
+
+// Math.round()
+
+
+    // The Math.round() method returns the value of a number rounded to
+    // the nearest integer. Let’s see an example:
+    console.log(Math.round(4.7))
+    // output: 5
+
+
+
+
+// Math.ceil()
+
+
+    // The Math.ceil() method returns the value of a number rounded up
+    // to its nearest integer. If a number is already an integer, the method
+    // will return the same number. The difference betweenMath.round and Math.ceil is that Math.round will round  to the nearest integer, while Math.ceil will round UP to the nearest integer.
+
+    console.log(Math.ceil(4.2))
+    // output: 5
+    console.log(Math.ceil(5))
+    // output: 5
+    // The "ceil" in the method name stands for "ceiling", which is a
+    // mathematical term for rounding up to the nearest integer.
+
+
+    // Math.floor()
+
+
+    // The Math.floor() method returns the value of a number rounded
+    // down to its nearest integer. Like the Math.ceil() method, if a
+    // number is already an integer, the method will return the same
+    // number:
+    console.log(Math.floor(4.7))
+    // output: 4
+    console.log(Math.floor(4))
+    // output: 4
+    // The "floor" in the method name is the opposite of "ceiling".
+
+
+    Math.max()
+    // The Math.max() method returns the largest value of a set of numbers. The method expects these numbers to be passed as individual
+    // arguments. Let’s see an example:
+    console.log(Math.max(1, 2, 3, 4, 5))
+    // output: 5
+    // Calling Math.max() with no arguments will return -Infinity:
+    console.log(Math.max())
+    // output: -Infinity
+    // If you pass a non-number argument to Math.max(), it will return NaN
+    // (not a number).
+    console.log(Math.max(1, 2, 3, 4, 5, 'a'))
+// output: NaN
+
+    // sort()
+    // The sort() method is used to sort the elements of an array. The
+    // sort() method modifies the original array and returns the sorted
+    // array. For example, if we want to sort an array of numbers, we
+    // can use the sort() method. By default, the sort() method sorts the
+    // elements of an array in ascending order:
+    // Higher Order Functions (HOFs) and Callbacks 75
+    const numbers = [7, 4, 3, 1, 5, 2, 8, 6]
+    numbers.sort()
+    console.log(numbers)
+    // Output: [1, 2, 3, 4, 5, 6, 7, 8]
+    // We can also sort an array of strings:
+    const favoriteColors = [
+    'red',
+    'blue',
+    'green',
+    'yellow',
+    'orange',
+    ]
+    favoriteColors.sort()
+    console.log(favoriteColors)
+    // Output: ['blue', 'green', 'orange', 'red', 'yellow']
+    // See that blue comes first because it starts with the letter ‘b’ which
+    // comes before the letter ‘g’ for green, and so on. If we want to
+    // sort the elements of an array in descending order, we can pass a
+    // callback function to the sort() method that takes two parameters
+    // representing two elements in the array. The callback function should
+    // return a negative number if the first element should come before the
+    // second element, a positive number if the first element should come
+    // after the second element, or 0 if the order of the elements doesn’t
+    // matter:
+    // Higher Order Functions (HOFs) and Callbacks 76
+    const famousBirthYears = [
+    1990, 2001, 1989, 2023, 2005, 1993, 2020,
+    ]
+    famousBirthYears.sort((a, b) => b - a)
+    console.log(famousBirthYears)
+    // Output: [2023, 2020, 2005, 2001, 1993, 1990, 1989]
+    // In this example, we sort the famousBirthYears array in descending
+    // order. The callback function takes two parameters, a and b, representing two elements in the array. Since we want to sort the array
+    // in descending order, we return b - a so that the second element
+    // comes before the first element (i.e., the bigger number comes before
+    // the smaller number). If we wanted to sort the array in ascending
+    // order, we would return a - b so that the first element comes before
+    // the second element (i.e., the smaller number comes before the bigger
+    // number):
+    famousBirthYears.sort((a, b) => a - b)
+    console.log(famousBirthYears)
+    // Output: [1989, 1990, 1993, 2001, 2005, 2020, 2023]
+
+
+
+
+    // The JavaScript Timing methods. 
+    // The JavaScript timing methods are built-in higher-order functions
+    // that allow us to schedule the execution of functions at a later time
+    // or at regular intervals. Let’s take a look at the most commonly used
+    // timing methods.
+    // setTimeout()
+    // The setTimeout() method allows us to schedule the execution of
+    // a function after a specified number of milliseconds. For example,
+    // if we want to display a message after 5 seconds, we can use the
+    // setTimeout() method to do so. The setTimeout() method takes
+    // two arguments: the function to be executed and the number of
+    // milliseconds to wait before executing the function. Let’s display a
+    // message after 5 seconds:
+    const displayMessage = () => {
+    console.log('Hello, world!')
+    }
+    setTimeout(displayMessage, 5000)
+    // Output: 2
+    // Output: Hello world!
+
+
+    // 1 second is a thousand milliseconds and 5 seconds is 5000 milliseconds. The setTimeout() method will wait for 5 seconds before executing the displayMessage() function. The setTimeout() method
+    // also returns a number that represents the ID of the timer immediately
+    // after it is called. We can use this ID to cancel the timer. First, let’s
+    // assign the setTimeout method to a variable:
+    const displayMessages = () => {
+    console.log('Hello, world!')
+}
+    const timerId = setTimeout(displayMessages, 5000)
+    console.log(timerId)
+    // Output: 4 (can be any number)
+    // Output: Hello world!
+    // This will still display the message after 5 seconds, but now we have
+    // the ID of the timer in the timerId variable. Let’s use it to cancel the
+    // timer before it executes the displayMessage() function. We’ll use
+    // Higher Order Functions (HOFs) and Callbacks 85
+    // the clearTimeout() method to do so. The clearTimeout() method
+    // takes the ID of the timer as an argument and cancels the timer:
+
+    const displayMessage1 = () => {
+    console.log('Hello, world!')
+    }
+    const timerId1 = setTimeout(displayMessage1, 5000)
+    clearTimeout(timerId1)
+    // The clearTimeout() method will cancel the timer before it executes
+    // the displayMessage() function. So when you run this code, the
+    // displayMessage() function will not be executed
+
+    // NB:- A second is a thousand milliseconds.
+
+
+
+    const persons = {
+    fullName: 'Oladimeji Isaac  ',
+    sayHello: function () {
+    console.log('Hello! My name is ' + this.fullName)
+    },
+    }
+    persons.sayHello()
+    // Output: Hello! My name is Oladimeji Isaac.
+
+
+    var people = {
+        firstName: "Isaac",
+        lastName:"Oladimeji",
+        age:24,
+        
+    }
+
+
+
+        </script>
+    </body>
+    </html>

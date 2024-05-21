@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <aside>
+            <section>
+                <article>
+                    <h1>HTML</h1>
+                    <p>HTML stands for Hyper Text Markup Language. It is the standard markup language for creating web pages and web applications.</p>
+                </article>
+                <article>
+                    <h1>CSS</h1>
+                    <p>CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed on screen, paper, or in other media.</p>
+                </article>
+                <article>
+                    <h1>JavaScript</h1>
+                    <p>JavaScript is the programming language of the Web.</p>
+                </article>
+            </section>
+        </aside>
+        <p id="hello"></p>
+        <script>
+        // In JavaScript, objects are a data structure that allows you to store multiple values as key-value pairs. Objects can contain properties and methods, which are defined as key-value pairs.
+        const car = {type:"Fiat", model:"500", color:"white"};
+        console.log(car);
+
+        //It can also be written like this;
+
+        const myCar = {
+            name: "Sienna",
+
+            model:"symphony",
+
+            year: 2024,
+
+            engineType: 200,
+
+            color: "Red",
+
+            function(){
+                let speed = 300;
+                return this.engineType * speed;
+            }
+        }
+
+        console.log(myCar.function());// If you have a function in your object, to call it in your log call the function and brackets.
+
+
+
+
+        const person = {
+            firstName: "Oladimeji",
+            lastName : "Isaac",
+            id       : 5566,
+            fullName : function() {
+        return "My name is" + " " + this.firstName + " " + this.lastName +" " + "and" + " " + this.id + " " + "is my ID.";
+    }
+};
+console.log(person.fullName());// This will output the concatenation of the first name and the last name of the person variable.
+
+
+
+
+
+    //The HTML DOM (Document Object Model)
+    // When a web page is loaded, the browser creates a Document Object Model of the page.
+    // The DOM can be used to even manipulate HTMl elements in the webpage, sometimes the "M", in the DOM is often called Manipulation.
+    // The HTML DOM model is constructed as a tree of Objects:
+
+
+    //A node is a point in the webpage that contains a specific data.
+    ///If you look at the HTML elements above, the !DOCTYPE element is a parent node holding no child.
+    // The html element is a parent node having two children node, the head nd body elements.
+    // The head element is a parent node having three children node, the two meta element and the title element.
+    //The body element is also a parent node housing the aside element, the section, the article, and the script element.
+    //The aside element is also a parent node having two children the section and the article element.
+    //The section element is a parent node having three children, the article element, the h1 element and the p element.
+
+    //All these elements can be easily manipulated with JavaScript.
+
+    //The HTML DOM can be accessed with JavaScript (and with other programming languages).
+
+    // In the DOM, all HTML elements are defined as objects.
+
+    // The programming interface is the properties and methods of each object.
+
+    // A property is a value that you can get or set (like changing the content of an HTML element).
+
+    // A method is an action you can do (like add or deleting an HTML element).
+
+
+    //The innerHTML element;
+
+    //The innerHTML method is a property of a DOM element in JavaScript that allows you to get or set the HTML content inside that element. When you use the innerHTML property to get the content, it returns the HTML content inside the element as a string. When you use it to set the content, you can replace the existing content with new HTML content.
+
+    //Examples:
+    //1.) 
+    document.getElementById("hello").innerHTML= "Hello World!";  // We successfully went into the HTML and fetched the id "hello", and gave it a child node Hello World!
+
+
+
+
+        </script>
+    </body>
+    </html>
