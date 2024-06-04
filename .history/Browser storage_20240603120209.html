@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Storage</title>
+</head>
+<body>
+    
+
+    <!-- When building web applications, you’ll often need to store data on
+the browser for various purposes like caching (storing data locally to
+improve performance), storing user preferences, or storing user data
+for easy retrieval. -->
+
+    <!-- Cookies
+    Cookies are small pieces of data that are stored on a user’s computer
+    by the web browser. They were designed to be a reliable mechanism
+    for websites to remember stateful information (such as items added
+    to the shopping cart in an online store) or to record the user’s
+    browsing activity and store small amounts of data that could be used
+    to persist information between page requests -->
+
+    <!-- Cookies are typically stored in key-value pairs, and each cookie is
+associated with a specific domain. So a website can only access
+cookies it has set. Cookies are also limited in size, and can only store
+a maximum of 4KB of data. They can be set to expire at a specific
+time, after which they will be deleted by the browser -->
+
+    <!-- Storing Data in Cookies -->
+        <!-- We can set a cookie using the document.cookie
+    property -->
+
+
+
+    <script>
+        // document.cookie=
+        //     'name=Ada Lovelace; expires=Fri, 23 Nov 2035 12:00:00\
+        //     UTC; path=/'
+
+        document.cookie = 'favorite_language=JavaScript'
+            console.log(document.cookie.split(';'));           
+             // "name=Ada Lovelace; favorite_language=
+
+            //  Retrieving Data from Cookies
+            // We can retrieve the value of a cookie by using the document.cookie
+            // property. However, this property returns a string of all the cookies
+            // for the current domain, so we’ll need to split the string into an
+            // array of individual cookies using the split() method. The split()
+            // method is a string method that takes a separator as an argument and
+            // returns an array of substrings. The separator is used to determine
+            // where each substring begins and ends. Since the cookies are separated by a semicolon and a space, we'll use ";" as the separator:
+
+            const cookies = document.cookie.split('; ');
+                console.log(cookies);
+                //["name=Ada Lovelace", "favorite_language=JavaScript"]
+
+
+                /*LocalStorage and SessionStorage are more recent additions to the
+                browser storage options, and they offer several advantages over
+                cookies. Like cookies, they allow web applications to store data on
+                the client, but they have a larger storage capacity (typically around
+                5MB) and they don’t send the data to the server with every request
+                like cookies do.
+                LocalStorage and SessionStorage are similar in that they both store
+                data on the client, but they differ in how long the data is stored.
+                LocalStorage stores data with no expiration date, so the data will
+                persist even after the browser window is closed. SessionStorage, on
+                the other hand, stores data for only one session. This means that the
+                data is deleted when the user closes the browser window or tab*/
+
+                /*LocalStorage is a property of the window object, so we can access it
+                using window.localStorage. The localStorage property is an object
+                that contains a setItem() method for setting data and a getItem()
+                method for retrieving data. */
+                localStorage.setItem('username', 'isaac');
+                const get = localStorage.getItem("username");
+                console.log(get);
+
+                /*Storing and Retrieving Arrays and Objects*/
+                /**/
+                const allUsernames = [
+                    'ada_lovelace', 
+                    'grace_hopper',
+                    'alan_turing',
+                    ]
+                    localStorage.setItem('allUsernames', allUsernames)
+                    const storedUsernames = localStorage.getItem(
+                    'allUsernames'
+                    )
+                    console.log(storedUsernames.split(" "))
+
+
+
+
+
+    </script>
+</body>
+</html>
