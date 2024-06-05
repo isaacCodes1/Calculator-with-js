@@ -105,7 +105,7 @@ time, after which they will be deleted by the browser -->
                             console.log(user);
 
                             const storedUser = localStorage.getItem('user')
-                                // console.log(storedUser);
+                                console.log(storedUser)
                                 // output: "{"username":"ada_lovelace",
                                 // "favoriteLanguage":"JavaScript"}"
                                 const userObject = JSON.parse(storedUser)
@@ -121,11 +121,7 @@ time, after which they will be deleted by the browser -->
                             getItem() method for retrieving data. Let’s use the same example
                             as before to store the username ada_lovelace in SessionStorage:*/
 
-                            sessionStorage.setItem('username', 'ada_lovelace');
-                            const username = sessionStorage.getItem('username');
-                            console.log(username)
-                            // output: "ada_lovelace"
-
+                            sessionStorage.setItem('username', 'ada_lovelace')
 
 
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous javascript</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+
+
+    <script>
+        // setTimeout is used to count the number of milliseconds before a specific
+        setTimeout(myFunction, 3000);
+        function myFunction() {
+        document.getElementById("demo").innerHTML = "I love You !!";
+        }
+
+
+        setInterval(myFunction, 1000);
+
+        function myFunction() {
+        let d = new Date();
+        document.getElementById("demo").innerHTML=
+        d.getHours() + ":" +
+        d.getMinutes() + ":" +
+        d.getSeconds();
+        }
+    </script>
+</body>
+</html>
+
